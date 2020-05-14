@@ -37,8 +37,8 @@ namespace Footsteps {
 
 		void FixedUpdate() {
 			UpdateAnimator();
-			RotateCharacter();
-			MoveCharacter();
+			//RotateCharacter();
+			//MoveCharacter();
 			print(directionalInput);
 		}
 
