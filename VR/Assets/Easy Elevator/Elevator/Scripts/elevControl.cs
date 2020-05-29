@@ -33,6 +33,7 @@ public class elevControl : MonoBehaviour {
 	public AudioSource vento3;
 	public AudioSource vento4;
 	public AudioSource cidade;
+	public AudioSource musica_elevador;
 
 	/// <summary>
 	/// returns the floor level to move the elevator to. 
@@ -430,6 +431,7 @@ public class elevControl : MonoBehaviour {
 			vento3.UnPause();
 			vento4.UnPause();
 			cidade.UnPause();
+			musica_elevador.Pause();
 		}
 
 		//USE THE HALL FRAME CALL BUTTON > TRIGGERED FROM callBtnTrigger.cs
@@ -465,6 +467,7 @@ public class elevControl : MonoBehaviour {
 		vento3.Pause();
 		vento4.Pause();
 		cidade.Pause();
+		musica_elevador.UnPause();
 	}
 }
 
