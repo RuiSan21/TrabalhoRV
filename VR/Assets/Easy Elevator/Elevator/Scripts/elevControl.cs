@@ -421,11 +421,7 @@ public class elevControl : MonoBehaviour {
 
 		if (doorOpen == false && transform.position.y > -1576)
         {
-			vento1.Pause();
-			vento2.Pause();
-			vento3.Pause();
-			vento4.Pause();
-			cidade.Pause();
+			Invoke("DelayedFunction", 2.3f);
 		}
 		else
         {
@@ -460,6 +456,15 @@ public class elevControl : MonoBehaviour {
 				PressButton( newFloor );
 			}	
 		}
+	}
+
+	private void DelayedFunction()
+	{
+		vento1.Pause();
+		vento2.Pause();
+		vento3.Pause();
+		vento4.Pause();
+		cidade.Pause();
 	}
 }
 
