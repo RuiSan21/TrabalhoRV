@@ -28,6 +28,11 @@ public class elevControl : MonoBehaviour {
 	[HideInInspector]
 	public int prevBtn, newFloor;
 	private Transform elevator;
+	public AudioSource vento1;
+	public AudioSource vento2;
+	public AudioSource vento3;
+	public AudioSource vento4;
+	public AudioSource cidade;
 
 	/// <summary>
 	/// returns the floor level to move the elevator to. 
@@ -413,6 +418,24 @@ public class elevControl : MonoBehaviour {
 	}
 	
 	void Update () {
+
+		if (doorOpen == false && transform.position.y > -1576)
+        {
+			vento1.Pause();
+			vento2.Pause();
+			vento3.Pause();
+			vento4.Pause();
+			cidade.Pause();
+		}
+		else
+        {
+			vento1.UnPause();
+			vento2.UnPause();
+			vento3.UnPause();
+			vento4.UnPause();
+			cidade.UnPause();
+		}
+
 		//USE THE HALL FRAME CALL BUTTON > TRIGGERED FROM callBtnTrigger.cs
 		if( useCallBtn ){
 			if(Input.GetKeyDown(KeyCode.E))
