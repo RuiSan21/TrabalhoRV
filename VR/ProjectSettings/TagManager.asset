@@ -9,6 +9,7 @@ TagManager:
   - elev01hallFrame
   - elev01
   - ZonaPermitida
+  - podeandar
   layers:
   - Default
   - TransparentFX
