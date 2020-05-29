@@ -34,6 +34,8 @@ public class elevControl : MonoBehaviour {
 	public AudioSource vento4;
 	public AudioSource cidade;
 	public AudioSource musica_elevador;
+	public GameObject gaivotas; 
+
 
 	/// <summary>
 	/// returns the floor level to move the elevator to. 
@@ -422,7 +424,7 @@ public class elevControl : MonoBehaviour {
 
 		if (doorOpen == false && transform.position.y > -1576)
         {
-			Invoke("DelayedFunction", 2.3f);
+			Invoke("DelayedFunction", 2.5f);
 		}
 		else
         {
@@ -430,6 +432,7 @@ public class elevControl : MonoBehaviour {
 			vento2.UnPause();
 			vento3.UnPause();
 			vento4.UnPause();
+			gaivotas.SetActive(true);
 			cidade.UnPause();
 			musica_elevador.Pause();
 		}
@@ -466,6 +469,7 @@ public class elevControl : MonoBehaviour {
 		vento2.Pause();
 		vento3.Pause();
 		vento4.Pause();
+		gaivotas.SetActive(false);
 		cidade.Pause();
 		musica_elevador.UnPause();
 	}
